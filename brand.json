@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "updated": "2024-12-10",
+  "organization": {
+    "name": "P.H.R.O.N.O.S.",
+    "fullName": "Public Heuristics for Resilient Ontology, Navigation, and Observational Science",
+    "tagline": "Calibrating the Human Signal",
+    "mission": "A digital observatory scanning the decline of strategic foresight in a high-noise world",
+    "legalName": "P.H.R.O.N.O.S. Observatory",
+    "founded": "2024",
+    "type": "Research Initiative"
+  },
+  "domains": {
+    "primary": "phronos.org",
+    "landing": "https://phronos.org",
+    "observatory": "https://observatory.phronos.org",
+    "instruments": "https://instruments.phronos.org"
+  },
+  "social": {
+    "github": "https://github.com/phronos-2025",
+    "email": "research@phronos.org"
+  },
+  "colors": {
+    "primary": {
+      "paper": {
+        "hex": "#F2F0E9",
+        "rgb": "242, 240, 233",
+        "usage": "Main background, light mode"
+      },
+      "ink": {
+        "hex": "#1A1A1A",
+        "rgb": "26, 26, 26",
+        "usage": "Primary text, borders, strong contrast"
+      },
+      "gold": {
+        "hex": "#B08D55",
+        "rgb": "176, 141, 85",
+        "usage": "Accents, highlights, interactive elements"
+      }
+    },
+    "semantic": {
+      "alert": {
+        "hex": "#CC5544",
+        "rgb": "204, 85, 68",
+        "usage": "Warnings, critical status indicators"
+      },
+      "success": {
+        "hex": "#22c55e",
+        "rgb": "34, 197, 94",
+        "usage": "Success states, positive indicators"
+      },
+      "info": {
+        "hex": "#3b82f6",
+        "rgb": "59, 130, 246",
+        "usage": "Informational elements, stable status"
+      },
+      "faded": {
+        "hex": "rgba(26, 26, 26, 0.5)",
+        "usage": "Secondary text, disabled states"
+      }
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #F2F0E9 0%, #E8E6DC 100%)",
+      "panel": "linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "serif": {
+        "name": "Cormorant Garamond",
+        "fallback": "Georgia, serif",
+        "weights": [300, 400, 600],
+        "italic": true,
+        "usage": "Headings, body text, elegant content",
+        "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      },
+      "mono": {
+        "name": "Fira Code",
+        "fallback": "Consolas, Monaco, monospace",
+        "weights": [400, 600],
+        "usage": "Code, technical labels, data displays",
+        "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      }
+    },
+    "scale": {
+      "base": "18px",
+      "ratio": 1.25,
+      "sizes": {
+        "xs": "0.7rem",
+        "sm": "0.85rem",
+        "base": "1rem",
+        "lg": "1.25rem",
+        "xl": "1.563rem",
+        "2xl": "1.953rem",
+        "3xl": "2.441rem",
+        "4xl": "3.052rem",
+        "5xl": "3.815rem"
+      }
+    },
+    "lineHeight": {
+      "tight": 1.2,
+      "normal": 1.5,
+      "relaxed": 1.6,
+      "loose": 1.8
+    },
+    "letterSpacing": {
+      "tight": "-0.5px",
+      "normal": "0",
+      "wide": "0.5px",
+      "wider": "1px"
+    }
+  },
+  "spacing": {
+    "base": "1rem",
+    "scale": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem",
+      "2xl": "3rem",
+      "3xl": "4rem",
+      "4xl": "6rem"
+    }
+  },
+  "borders": {
+    "radius": {
+      "none": "0",
+      "sm": "2px",
+      "md": "4px",
+      "lg": "8px",
+      "full": "9999px"
+    },
+    "width": {
+      "thin": "1px",
+      "default": "2px",
+      "thick": "4px"
+    }
+  },
+  "shadows": {
+    "none": "none",
+    "sm": "2px 2px 0px rgba(26, 26, 26, 0.1)",
+    "md": "8px 8px 0px rgba(26, 26, 26, 0.1)",
+    "lg": "15px 15px 0px rgba(26, 26, 26, 0.1)",
+    "button": "8px 8px 0px #B08D55"
+  },
+  "transitions": {
+    "fast": "0.1s",
+    "normal": "0.2s",
+    "slow": "0.3s",
+    "ease": "cubic-bezier(0.4, 0, 0.6, 1)"
+  },
+  "layout": {
+    "maxWidth": {
+      "content": "1600px",
+      "reading": "65ch"
+    },
+    "padding": {
+      "page": "6%",
+      "section": "4rem",
+      "card": "2rem"
+    },
+    "grid": {
+      "size": "100px",
+      "color": "rgba(26, 26, 26, 0.05)",
+      "enabled": true
+    }
+  },
+  "components": {
+    "button": {
+      "primary": {
+        "background": "transparent",
+        "border": "2px solid #1A1A1A",
+        "color": "#1A1A1A",
+        "hoverBackground": "#1A1A1A",
+        "hoverColor": "#F2F0E9",
+        "hoverShadow": "8px 8px 0px #B08D55"
+      },
+      "secondary": {
+        "background": "#1A1A1A",
+        "color": "#F2F0E9",
+        "hoverBackground": "#B08D55",
+        "hoverColor": "#1A1A1A"
+      }
+    },
+    "statusBadge": {
+      "living": {
+        "color": "#22c55e",
+        "background": "rgba(34, 197, 94, 0.1)",
+        "label": "Living"
+      },
+      "stable": {
+        "color": "#3b82f6",
+        "background": "rgba(59, 130, 246, 0.1)",
+        "label": "Stable"
+      },
+      "archived": {
+        "color": "#6b7280",
+        "background": "rgba(107, 114, 128, 0.1)",
+        "label": "Archived"
+      }
+    }
+  },
+  "content": {
+    "tone": {
+      "primary": "Academic yet accessible",
+      "characteristics": [
+        "Precise and rigorous",
+        "Humble about uncertainty",
+        "Forward-looking",
+        "Evidence-based",
+        "Transparent about limitations"
+      ]
+    },
+    "vocabulary": {
+      "prefer": [
+        "foresight",
+        "signal",
+        "noise",
+        "calibration",
+        "observatory",
+        "framework",
+        "epistemic",
+        "resilient"
+      ],
+      "avoid": [
+        "disruptive",
+        "revolutionary",
+        "game-changing",
+        "synergy",
+        "leverage"
+      ]
+    }
+  },
+  "seo": {
+    "titleTemplate": "%s | P.H.R.O.N.O.S. Observatory",
+    "defaultTitle": "P.H.R.O.N.O.S. | Public Heuristics for Resilient Ontology, Navigation, and Observational Science",
+    "defaultDescription": "A digital observatory calibrating the human signal in a high-noise world. Research on strategic foresight, decision-making, and institutional resilience.",
+    "keywords": [
+      "strategic foresight",
+      "decision making",
+      "institutional research",
+      "AI frameworks",
+      "observatory",
+      "open science",
+      "epistemic humility"
+    ],
+    "ogImage": "/images/og-image.png",
+    "twitterCard": "summary_large_image"
+  },
+  "licenses": {
+    "content": "CC BY 4.0",
+    "code": "MIT",
+    "data": "CC0 1.0 (Public Domain)"
+  }
+}
