@@ -1,6 +1,6 @@
 # P.H.R.O.N.O.S. Brand Kit
 
-**Version 1.0.0** | Last Updated: December 10, 2024
+**Version 1.0.0** | Last Updated: December 10, 2025
 
 This repository contains the master configuration files for P.H.R.O.N.O.S. brand identity, ensuring consistency across all properties (landing page, observatory, instruments).
 
