@@ -81,6 +81,10 @@ When making changes:
 Example:
 ```markdown
 ## [Unreleased]
+### Fixed
+- Logo scaling now proportional at all sizes (100px, 200px, 320px+)
+- Chevrons align correctly to circle edge at any size
+- Font size, dot size, and spacing scale proportionally
 
 ### Added
 - Logo animation component ([#123])
