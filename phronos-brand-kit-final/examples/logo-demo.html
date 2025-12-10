@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p.h.r.o.n.o.s. Logo Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="phronos-logo.css">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background: #1A1A1A;
+            color: #F2F0E9;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .demo-section {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #B08D55;
+            margin-bottom: 20px;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 20px;
+        }
+
+        .logo-item {
+            text-align: center;
+        }
+
+        .logo-label {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #B08D55;
+        }
+
+        .light-bg {
+            background: #F2F0E9;
+            padding: 40px;
+            border-radius: 0;
+        }
+
+        .dark-bg {
+            background: #1A1A1A;
+            padding: 40px;
+            border-radius: 0;
+        }
+
+        code {
+            background: rgba(176, 141, 85, 0.1);
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>p.h.r.o.n.o.s. LOGO COMPONENT</h1>
+    <p style="margin-bottom: 40px;">Public Hub for Resilient Ontology, Noesis, and Observational Science</p>
+
+    <div class="demo-section">
+        <h2>// Dark Mode</h2>
+        <div class="logo-grid">
+            <div class="logo-item dark-bg">
+                <div id="logo-dark-full"></div>
+                <div class="logo-label">Default (320px)</div>
+            </div>
+            <div class="logo-item dark-bg">
+                <div id="logo-dark-small"></div>
+                <div class="logo-label">Small (200px)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>// Light Mode</h2>
+        <div class="logo-grid">
+            <div class="logo-item light-bg">
+                <div id="logo-light-full"></div>
+                <div class="logo-label" style="color: #1A1A1A;">Default (320px)</div>
+            </div>
+            <div class="logo-item light-bg">
+                <div id="logo-light-small"></div>
+                <div class="logo-label" style="color: #1A1A1A;">Small (200px)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>// Icon Only</h2>
+        <div class="logo-grid">
+            <div class="logo-item dark-bg">
+                <div id="logo-icon-only"></div>
+                <div class="logo-label">No Text or Dots</div>
+            </div>
+            <div class="logo-item dark-bg">
+                <div id="logo-no-text"></div>
+                <div class="logo-label">Dots Only</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>// Usage</h2>
+        <p style="margin-bottom: 20px;">Initialize the logo with JavaScript:</p>
+        <pre style="background: rgba(176, 141, 85, 0.1); padding: 20px; overflow-x: auto; font-size: 12px; line-height: 1.6;">
+// Basic usage
+new PhronosLogo('container-id');
+
+// With options
+new PhronosLogo('container-id', {
+    theme: 'dark',      // 'dark' or 'light'
+    showText: true,     // show ".p.h.r.o.n.o.s." text
+    showDots: true,     // show six pulsing dots
+    size: 320           // size in pixels
+});
+
+// Change theme dynamically
+const logo = new PhronosLogo('container-id');
+logo.setTheme('light');
+logo.setSize(400);
+        </pre>
+    </div>
+
+    <script src="phronos-logo.js"></script>
+    <script>
+        // Dark mode examples
+        new PhronosLogo('logo-dark-full', {
+            theme: 'dark',
+            size: 320
+        });
+
+        new PhronosLogo('logo-dark-small', {
+            theme: 'dark',
+            size: 200
+        });
+
+        // Light mode examples
+        new PhronosLogo('logo-light-full', {
+            theme: 'light',
+            size: 320
+        });
+
+        new PhronosLogo('logo-light-small', {
+            theme: 'light',
+            size: 200
+        });
+
+        // Icon only examples
+        new PhronosLogo('logo-icon-only', {
+            theme: 'dark',
+            showText: false,
+            showDots: false,
+            size: 320
+        });
+
+        new PhronosLogo('logo-no-text', {
+            theme: 'dark',
+            showText: false,
+            showDots: true,
+            size: 320
+        });
+    </script>
+</body>
+</html>

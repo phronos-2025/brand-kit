@@ -1,0 +1,261 @@
+/**
+ * P.H.R.O.N.O.S. Brand Kit - CSS Variables
+ * Version 1.0.0
+ * 
+ * Import this file in all three sites to ensure visual consistency:
+ * @import url('path/to/phronos-variables.css');
+ * 
+ * Then reference variables like: var(--phronos-color-paper)
+ */
+
+:root {
+  /* ========================================
+     COLORS - Primary Palette
+     ======================================== */
+  
+  --phronos-color-paper: #F2F0E9;
+  --phronos-color-ink: #1A1A1A;
+  --phronos-color-gold: #B08D55;
+  --phronos-color-faded: rgba(26, 26, 26, 0.5);
+  
+  /* ========================================
+     COLORS - Semantic
+     ======================================== */
+  
+  --phronos-color-alert: #CC5544;
+  --phronos-color-success: #22c55e;
+  --phronos-color-info: #3b82f6;
+  --phronos-color-warning: #f59e0b;
+  
+  /* ========================================
+     COLORS - Status Badges
+     ======================================== */
+  
+  --phronos-status-living-color: #22c55e;
+  --phronos-status-living-bg: rgba(34, 197, 94, 0.1);
+  --phronos-status-stable-color: #3b82f6;
+  --phronos-status-stable-bg: rgba(59, 130, 246, 0.1);
+  --phronos-status-archived-color: #6b7280;
+  --phronos-status-archived-bg: rgba(107, 114, 128, 0.1);
+  
+  /* ========================================
+     TYPOGRAPHY - Font Families
+     ======================================== */
+  
+  --phronos-font-serif: 'Cormorant Garamond', Georgia, serif;
+  --phronos-font-mono: 'Fira Code', Consolas, Monaco, monospace;
+  
+  /* ========================================
+     TYPOGRAPHY - Font Sizes
+     ======================================== */
+  
+  --phronos-text-xs: 0.7rem;      /* 11.2px */
+  --phronos-text-sm: 0.85rem;     /* 13.6px */
+  --phronos-text-base: 1rem;      /* 16px */
+  --phronos-text-lg: 1.25rem;     /* 20px */
+  --phronos-text-xl: 1.563rem;    /* 25px */
+  --phronos-text-2xl: 1.953rem;   /* 31.2px */
+  --phronos-text-3xl: 2.441rem;   /* 39px */
+  --phronos-text-4xl: 3.052rem;   /* 48.8px */
+  --phronos-text-5xl: 3.815rem;   /* 61px */
+  
+  /* ========================================
+     TYPOGRAPHY - Line Heights
+     ======================================== */
+  
+  --phronos-leading-tight: 1.2;
+  --phronos-leading-normal: 1.5;
+  --phronos-leading-relaxed: 1.6;
+  --phronos-leading-loose: 1.8;
+  
+  /* ========================================
+     TYPOGRAPHY - Letter Spacing
+     ======================================== */
+  
+  --phronos-tracking-tight: -0.5px;
+  --phronos-tracking-normal: 0;
+  --phronos-tracking-wide: 0.5px;
+  --phronos-tracking-wider: 1px;
+  
+  /* ========================================
+     SPACING SCALE
+     ======================================== */
+  
+  --phronos-space-xs: 0.25rem;    /* 4px */
+  --phronos-space-sm: 0.5rem;     /* 8px */
+  --phronos-space-md: 1rem;       /* 16px */
+  --phronos-space-lg: 1.5rem;     /* 24px */
+  --phronos-space-xl: 2rem;       /* 32px */
+  --phronos-space-2xl: 3rem;      /* 48px */
+  --phronos-space-3xl: 4rem;      /* 64px */
+  --phronos-space-4xl: 6rem;      /* 96px */
+  
+  /* ========================================
+     BORDERS
+     ======================================== */
+  
+  --phronos-border-radius-none: 0;
+  --phronos-border-radius-sm: 2px;
+  --phronos-border-radius-md: 4px;
+  --phronos-border-radius-lg: 8px;
+  --phronos-border-radius-full: 9999px;
+  
+  --phronos-border-width-thin: 1px;
+  --phronos-border-width-default: 2px;
+  --phronos-border-width-thick: 4px;
+  
+  /* ========================================
+     SHADOWS
+     ======================================== */
+  
+  --phronos-shadow-none: none;
+  --phronos-shadow-sm: 2px 2px 0px rgba(26, 26, 26, 0.1);
+  --phronos-shadow-md: 8px 8px 0px rgba(26, 26, 26, 0.1);
+  --phronos-shadow-lg: 15px 15px 0px rgba(26, 26, 26, 0.1);
+  --phronos-shadow-button: 8px 8px 0px var(--phronos-color-gold);
+  
+  /* ========================================
+     TRANSITIONS
+     ======================================== */
+  
+  --phronos-transition-fast: 0.1s;
+  --phronos-transition-normal: 0.2s;
+  --phronos-transition-slow: 0.3s;
+  --phronos-transition-ease: cubic-bezier(0.4, 0, 0.6, 1);
+  
+  /* ========================================
+     LAYOUT
+     ======================================== */
+  
+  --phronos-max-width-content: 1600px;
+  --phronos-max-width-reading: 65ch;
+  
+  --phronos-padding-page: 6%;
+  --phronos-padding-section: 4rem;
+  --phronos-padding-card: 2rem;
+  
+  /* Grid background */
+  --phronos-grid-size: 100px;
+  --phronos-grid-color: rgba(26, 26, 26, 0.05);
+  
+  /* ========================================
+     Z-INDEX SCALE (Prevent conflicts)
+     ======================================== */
+  
+  --phronos-z-base: 0;
+  --phronos-z-dropdown: 1000;
+  --phronos-z-sticky: 1020;
+  --phronos-z-fixed: 1030;
+  --phronos-z-modal-backdrop: 1040;
+  --phronos-z-modal: 1050;
+  --phronos-z-popover: 1060;
+  --phronos-z-tooltip: 1070;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.phronos-container {
+  max-width: var(--phronos-max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--phronos-padding-page);
+  padding-right: var(--phronos-padding-page);
+}
+
+.phronos-grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(var(--phronos-grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--phronos-grid-color) 1px, transparent 1px);
+  background-size: var(--phronos-grid-size) var(--phronos-grid-size);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.phronos-font-serif {
+  font-family: var(--phronos-font-serif);
+}
+
+.phronos-font-mono {
+  font-family: var(--phronos-font-mono);
+}
+
+/* ========================================
+   COMPONENT BASE STYLES
+   ======================================== */
+
+.phronos-button-primary {
+  background: transparent;
+  border: var(--phronos-border-width-default) solid var(--phronos-color-ink);
+  color: var(--phronos-color-ink);
+  padding: 1.2rem 2.5rem;
+  font-family: var(--phronos-font-mono);
+  text-transform: uppercase;
+  font-size: var(--phronos-text-sm);
+  letter-spacing: var(--phronos-tracking-wider);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--phronos-transition-normal) var(--phronos-transition-ease);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.phronos-button-primary:hover {
+  background: var(--phronos-color-ink);
+  color: var(--phronos-color-paper);
+  box-shadow: var(--phronos-shadow-button);
+  transform: translate(-2px, -2px);
+}
+
+.phronos-button-secondary {
+  background: var(--phronos-color-ink);
+  color: var(--phronos-color-paper);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--phronos-font-mono);
+  font-size: var(--phronos-text-xs);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--phronos-color-ink);
+  transition: all var(--phronos-transition-normal) var(--phronos-transition-ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phronos-button-secondary:hover {
+  background: var(--phronos-color-gold);
+  border-color: var(--phronos-color-gold);
+  color: var(--phronos-color-ink);
+}
+
+/* ========================================
+   DARK MODE (Optional)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override colors for dark mode if needed */
+    /* Currently not implemented - all sites use light mode */
+  }
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Mobile: Default (< 768px) */
+/* Tablet: 768px - 1024px */
+/* Desktop: > 1024px */
+
+@media (max-width: 768px) {
+  :root {
+    --phronos-padding-page: 5%;
+    --phronos-padding-section: 2rem;
+  }
+}

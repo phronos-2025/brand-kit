@@ -1,0 +1,185 @@
+/* p.h.r.o.n.o.s. Ouroboros Logo Styles */
+
+:root {
+    --paper: #F2F0E9;
+    --ink: #1A1A1A;
+    --gold: #B08D55;
+}
+
+.phronos-logo {
+    width: 320px;
+    height: 320px;
+    position: relative;
+}
+
+/* Rotating container for everything */
+.phronos-rotating-elements {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: phronos-orbit-rotate 20s linear infinite;
+}
+
+/* The snake's body - circular path */
+.phronos-snake-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.phronos-snake-body svg {
+    width: 100%;
+    height: 100%;
+}
+
+.phronos-body-circle {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 3;
+}
+
+/* The Head - consuming mouth (chevron pointing right along the circle) */
+.phronos-snake-head {
+    position: absolute;
+    width: 16.5px;
+    height: 22.5px;
+    top: 50%;
+    left: 50%;
+    margin-top: -136.25px;
+    margin-left: -8.25px;
+    transform: rotate(90deg);
+}
+
+.phronos-head-chevron {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.phronos-head-chevron::before,
+.phronos-head-chevron::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--gold);
+}
+
+.phronos-head-chevron::before {
+    left: 0;
+    transform-origin: right center;
+    transform: skewY(-25deg);
+}
+
+.phronos-head-chevron::after {
+    right: 0;
+    transform-origin: left center;
+    transform: skewY(25deg);
+}
+
+/* The Tail - consumed end (chevron pointing left along the circle) */
+.phronos-snake-tail {
+    position: absolute;
+    width: 16.5px;
+    height: 22.5px;
+    top: 50%;
+    left: 50%;
+    margin-top: 113.75px;
+    margin-left: -8.25px;
+    transform: rotate(-90deg);
+}
+
+.phronos-tail-chevron {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.phronos-tail-chevron::before,
+.phronos-tail-chevron::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--gold);
+}
+
+.phronos-tail-chevron::before {
+    left: 0;
+    transform-origin: right center;
+    transform: skewY(-25deg);
+}
+
+.phronos-tail-chevron::after {
+    right: 0;
+    transform-origin: left center;
+    transform: skewY(25deg);
+}
+
+/* Center content */
+.phronos-logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.phronos-logo-acronym {
+    font-family: 'Fira Code', monospace;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--paper);
+}
+
+.phronos-logo-acronym .period {
+    font-size: 16px;
+    opacity: 0.4;
+}
+
+.phronos-logo-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.phronos-logo-dots span {
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    display: block;
+    animation: phronos-pulse-dot 2s ease-in-out infinite;
+}
+
+.phronos-logo-dots span:nth-child(2) { animation-delay: 0.3s; }
+.phronos-logo-dots span:nth-child(3) { animation-delay: 0.6s; }
+.phronos-logo-dots span:nth-child(4) { animation-delay: 0.9s; }
+.phronos-logo-dots span:nth-child(5) { animation-delay: 1.2s; }
+.phronos-logo-dots span:nth-child(6) { animation-delay: 1.5s; }
+
+/* Animations */
+@keyframes phronos-orbit-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes phronos-pulse-dot {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Light mode variant */
+.phronos-logo.light .phronos-body-circle {
+    stroke: var(--gold);
+}
+
+.phronos-logo.light .phronos-logo-acronym {
+    color: var(--ink);
+}

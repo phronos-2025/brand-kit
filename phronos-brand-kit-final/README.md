@@ -1,8 +1,15 @@
 # P.H.R.O.N.O.S. Brand Kit
 
-**Version 1.0.0** | Last Updated: December 10, 2024
+**Version 1.1.0** | Last Updated: December 10, 2024
 
 This repository contains the master configuration files for P.H.R.O.N.O.S. brand identity, ensuring consistency across all properties (landing page, observatory, instruments).
+
+## 🎉 What's New in v1.1.0
+
+- ✨ **Animated Logo Component** - Ouroboros design with rotating animation
+- 📁 **Organized Assets** - Logos, animations, icons in proper folders
+- 📄 **Usage Examples** - Demo page showing all logo variants
+- 📖 **Complete Documentation** - README files for each component
 
 ## 📁 What's Inside
 
@@ -37,6 +44,43 @@ This repository contains the master configuration files for P.H.R.O.N.O.S. brand
    - All design tokens as CSS variables
    - Utility classes
    - Component base styles
+
+5. **`assets/`** - Brand assets
+   - `logos/` - Animated and static logos
+     - `phronos-logo.js` - JavaScript logo component
+     - `phronos-logo.css` - Logo styles
+     - `README.md` - Usage instructions
+   - `animations/` - Animation components
+   - `icons/` - Icon set
+
+6. **`examples/`** - Usage examples
+   - `logo-demo.html` - Interactive logo demo
+
+## 🎨 Using the Animated Logo
+
+### Quick Start
+
+```html
+<!-- Include the files -->
+<link rel="stylesheet" href="assets/logos/phronos-logo.css">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+<script src="assets/logos/phronos-logo.js"></script>
+
+<!-- Create container -->
+<div id="my-logo"></div>
+
+<!-- Initialize -->
+<script>
+  new PhronosLogo('my-logo', {
+    theme: 'dark',    // 'dark' or 'light'
+    showText: true,   // show ".p.h.r.o.n.o.s."
+    showDots: true,   // show pulsing dots
+    size: 320         // size in pixels
+  });
+</script>
+```
+
+See `examples/logo-demo.html` for more examples!
 
 ## 🎯 Purpose
 
