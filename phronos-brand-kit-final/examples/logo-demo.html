@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p.h.r.o.n.o.s. Logo Demo</title>
+    <title>p.h.r.o.n.o.s. Logo Demo - Scaled</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="phronos-logo.css">
+    <link rel="stylesheet" href="phronos-logo-scaled.css">
     <style>
         body {
             font-family: 'Fira Code', monospace;
@@ -68,14 +68,44 @@
             border-radius: 2px;
             font-size: 12px;
         }
+
+        .size-comparison {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .size-item {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>p.h.r.o.n.o.s. LOGO COMPONENT</h1>
-    <p style="margin-bottom: 40px;">Public Hub for Resilient Ontology, Noesis, and Observational Science</p>
+    <h1>p.h.r.o.n.o.s. LOGO COMPONENT v1.1</h1>
+    <p style="margin-bottom: 40px;">Public Heuristics for Resilient Ontology, Navigation, and Observational Science</p>
 
     <div class="demo-section">
-        <h2>// Dark Mode</h2>
+        <h2>// Size Comparison - Proportional Scaling</h2>
+        <div class="size-comparison dark-bg">
+            <div class="size-item">
+                <div id="logo-size-100"></div>
+                <div class="logo-label">100px (Nav/Icon)</div>
+            </div>
+            <div class="size-item">
+                <div id="logo-size-200"></div>
+                <div class="logo-label">200px (Small)</div>
+            </div>
+            <div class="size-item">
+                <div id="logo-size-320"></div>
+                <div class="logo-label">320px (Default)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>// Dark Mode (All Sizes)</h2>
         <div class="logo-grid">
             <div class="logo-item dark-bg">
                 <div id="logo-dark-full"></div>
@@ -85,11 +115,15 @@
                 <div id="logo-dark-small"></div>
                 <div class="logo-label">Small (200px)</div>
             </div>
+            <div class="logo-item dark-bg">
+                <div id="logo-dark-tiny"></div>
+                <div class="logo-label">Tiny (100px)</div>
+            </div>
         </div>
     </div>
 
     <div class="demo-section">
-        <h2>// Light Mode</h2>
+        <h2>// Light Mode (All Sizes)</h2>
         <div class="logo-grid">
             <div class="logo-item light-bg">
                 <div id="logo-light-full"></div>
@@ -99,19 +133,27 @@
                 <div id="logo-light-small"></div>
                 <div class="logo-label" style="color: #1A1A1A;">Small (200px)</div>
             </div>
+            <div class="logo-item light-bg">
+                <div id="logo-light-tiny"></div>
+                <div class="logo-label" style="color: #1A1A1A;">Tiny (100px)</div>
+            </div>
         </div>
     </div>
 
     <div class="demo-section">
-        <h2>// Icon Only</h2>
+        <h2>// Icon Variations</h2>
         <div class="logo-grid">
             <div class="logo-item dark-bg">
-                <div id="logo-icon-only"></div>
-                <div class="logo-label">No Text or Dots</div>
+                <div id="logo-icon-only-320"></div>
+                <div class="logo-label">Icon Only - 320px</div>
             </div>
             <div class="logo-item dark-bg">
-                <div id="logo-no-text"></div>
-                <div class="logo-label">Dots Only</div>
+                <div id="logo-icon-only-100"></div>
+                <div class="logo-label">Icon Only - 100px (Nav)</div>
+            </div>
+            <div class="logo-item dark-bg">
+                <div id="logo-dots-only"></div>
+                <div class="logo-label">Dots Only - 200px</div>
             </div>
         </div>
     </div>
@@ -123,13 +165,19 @@
 // Basic usage
 new PhronosLogo('container-id');
 
-// With options
+// With options - SCALING NOW WORKS PROPERLY!
 new PhronosLogo('container-id', {
     theme: 'dark',      // 'dark' or 'light'
     showText: true,     // show ".p.h.r.o.n.o.s." text
     showDots: true,     // show six pulsing dots
-    size: 320           // size in pixels
+    size: 320           // ANY size in pixels - scales proportionally
 });
+
+// Common sizes:
+// 100px - Navigation bars, small icons
+// 200px - Medium displays
+// 320px - Default, hero sections
+// 400px+ - Large hero displays
 
 // Change theme dynamically
 const logo = new PhronosLogo('container-id');
@@ -138,8 +186,24 @@ logo.setSize(400);
         </pre>
     </div>
 
-    <script src="phronos-logo.js"></script>
+    <script src="phronos-logo-scaled.js"></script>
     <script>
+        // Size comparison
+        new PhronosLogo('logo-size-100', {
+            theme: 'dark',
+            size: 100
+        });
+
+        new PhronosLogo('logo-size-200', {
+            theme: 'dark',
+            size: 200
+        });
+
+        new PhronosLogo('logo-size-320', {
+            theme: 'dark',
+            size: 320
+        });
+
         // Dark mode examples
         new PhronosLogo('logo-dark-full', {
             theme: 'dark',
@@ -149,6 +213,11 @@ logo.setSize(400);
         new PhronosLogo('logo-dark-small', {
             theme: 'dark',
             size: 200
+        });
+
+        new PhronosLogo('logo-dark-tiny', {
+            theme: 'dark',
+            size: 100
         });
 
         // Light mode examples
@@ -162,19 +231,31 @@ logo.setSize(400);
             size: 200
         });
 
-        // Icon only examples
-        new PhronosLogo('logo-icon-only', {
+        new PhronosLogo('logo-light-tiny', {
+            theme: 'light',
+            size: 100
+        });
+
+        // Icon variations
+        new PhronosLogo('logo-icon-only-320', {
             theme: 'dark',
             showText: false,
             showDots: false,
             size: 320
         });
 
-        new PhronosLogo('logo-no-text', {
+        new PhronosLogo('logo-icon-only-100', {
+            theme: 'dark',
+            showText: false,
+            showDots: false,
+            size: 100
+        });
+
+        new PhronosLogo('logo-dots-only', {
             theme: 'dark',
             showText: false,
             showDots: true,
-            size: 320
+            size: 200
         });
     </script>
 </body>

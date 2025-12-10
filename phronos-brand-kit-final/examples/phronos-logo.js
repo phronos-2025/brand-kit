@@ -1,8 +1,6 @@
 /**
  * p.h.r.o.n.o.s. Ouroboros Logo Component
- * Public Heuristics for Resilient Ontology, Navigation, and Observational Science
- * 
- * Version 1.1.0 - Fixed proportional scaling
+ * Public Hub for Resilient Ontology, Noesis, and Observational Science
  */
 
 class PhronosLogo {
@@ -25,10 +23,9 @@ class PhronosLogo {
         }
 
         const themeClass = this.options.theme === 'light' ? 'light' : '';
-        const size = this.options.size;
         
         this.container.innerHTML = `
-            <div class="phronos-logo ${themeClass}" style="width: ${size}px; height: ${size}px; --logo-size: ${size};">
+            <div class="phronos-logo ${themeClass}" style="width: ${this.options.size}px; height: ${this.options.size}px;">
                 <div class="phronos-rotating-elements">
                     <!-- The snake's body - circular path -->
                     <div class="phronos-snake-body">

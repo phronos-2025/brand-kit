@@ -1,4 +1,4 @@
-/* p.h.r.o.n.o.s. Ouroboros Logo Styles - Proportional Scaling */
+/* p.h.r.o.n.o.s. Ouroboros Logo Styles */
 
 :root {
     --paper: #F2F0E9;
@@ -7,14 +7,9 @@
 }
 
 .phronos-logo {
-    /* Default size - will be overridden by inline style */
     width: 320px;
     height: 320px;
     position: relative;
-    
-    /* Scale factor: all measurements are relative to logo size */
-    --logo-size: 320;
-    --scale: calc(var(--logo-size) / 320);
 }
 
 /* Rotating container for everything */
@@ -44,21 +39,18 @@
 .phronos-body-circle {
     fill: none;
     stroke: var(--gold);
-    /* Stroke width scales with logo size */
-    stroke-width: calc(3 * var(--scale));
+    stroke-width: 3;
 }
 
 /* The Head - consuming mouth (chevron pointing right along the circle) */
 .phronos-snake-head {
     position: absolute;
-    /* Chevron size scales proportionally */
-    width: calc(16.5px * var(--scale));
-    height: calc(22.5px * var(--scale));
+    width: 16.5px;
+    height: 22.5px;
     top: 50%;
     left: 50%;
-    /* Position on circle edge - scales with logo size */
-    margin-top: calc(-136.25px * var(--scale));
-    margin-left: calc(-8.25px * var(--scale));
+    margin-top: -136.25px;
+    margin-left: -8.25px;
     transform: rotate(90deg);
 }
 
@@ -92,14 +84,12 @@
 /* The Tail - consumed end (chevron pointing left along the circle) */
 .phronos-snake-tail {
     position: absolute;
-    /* Chevron size scales proportionally */
-    width: calc(16.5px * var(--scale));
-    height: calc(22.5px * var(--scale));
+    width: 16.5px;
+    height: 22.5px;
     top: 50%;
     left: 50%;
-    /* Position on circle edge - scales with logo size */
-    margin-top: calc(113.75px * var(--scale));
-    margin-left: calc(-8.25px * var(--scale));
+    margin-top: 113.75px;
+    margin-left: -8.25px;
     transform: rotate(-90deg);
 }
 
@@ -142,32 +132,27 @@
 
 .phronos-logo-acronym {
     font-family: 'Fira Code', monospace;
-    /* Font size scales with logo */
-    font-size: calc(28px * var(--scale));
+    font-size: 28px;
     font-weight: 600;
-    /* Letter spacing scales too */
-    letter-spacing: calc(2px * var(--scale));
+    letter-spacing: 2px;
     color: var(--paper);
 }
 
 .phronos-logo-acronym .period {
-    /* Period size scales with base font */
-    font-size: calc(16px * var(--scale));
+    font-size: 16px;
     opacity: 0.4;
 }
 
 .phronos-logo-dots {
     display: flex;
     justify-content: center;
-    /* Gap scales with logo */
-    gap: calc(6px * var(--scale));
-    margin-top: calc(12px * var(--scale));
+    gap: 6px;
+    margin-top: 12px;
 }
 
 .phronos-logo-dots span {
-    /* Dot size scales */
-    width: calc(4px * var(--scale));
-    height: calc(4px * var(--scale));
+    width: 4px;
+    height: 4px;
     background: var(--gold);
     display: block;
     animation: phronos-pulse-dot 2s ease-in-out infinite;
