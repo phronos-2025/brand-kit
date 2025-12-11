@@ -1,6 +1,6 @@
 # P.H.R.O.N.O.S. Brand Guide
 
-**Version 1.0.0** | Last Updated: December 10, 2024
+**Version 1.0.1** | Last Updated: December 10, 2024
 
 This document defines the visual identity, voice, and standards for all P.H.R.O.N.O.S. properties.
 
@@ -12,7 +12,7 @@ This document defines the visual identity, voice, and standards for all P.H.R.O.
 **P.H.R.O.N.O.S.**
 
 ### Full Name
-**Public Heuristics for Resilient Ontology, Navigation, and Observational Science**
+**Public Hub for Resilient Ontological Navigation via Open Science**
 
 ### Tagline
 **"Calibrating the Human Signal"**
@@ -88,7 +88,7 @@ The "lens icon" represents:
 
 #### ✗ Don't
 - Use buzzwords ("disruptive," "synergy," "game-changing")
-- Make overclaimed promises
+- Make hyperbolic promises
 - Hide limitations
 - Use jargon without explanation
 - Write in passive voice excessively

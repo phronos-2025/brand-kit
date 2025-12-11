@@ -14,16 +14,16 @@ This glossary defines the official terminology used across all P.H.R.O.N.O.S. pr
 **Never**: phronos, PHRONOS, Phronos, P.H.R.O.N.O.S
 
 ### Full Expansion
-**Public Heuristics for Resilient Ontology, Navigation, and Observational Science**
+**Public Hub for Resilient Ontological Navigation via Open Science**
 
 **Breakdown**:
-- **Public**: Open, transparent, accessible to all
-- **Heuristics**: Practical approaches to problem-solving under uncertainty
+- **Public**: Accessible and available to all, for the public good
+- **Hub**: Centralized platform and repository
 - **Resilient**: Capable of adapting without losing core structure
-- **Ontology**: Systematic categorization of what exists and how it relates
+- **Ontological**: Systematic categorization of human being & human existence
 - **Navigation**: Pathfinding through complexity
-- **Observational**: Empirical, measurement-based
-- **Science**: Rigorous, falsifiable, cumulative knowledge
+- **Open**: Transparent and open to all for participation and criticism
+- **Science**: Empirical approach to advancing humanity's understanding of the world
 
 ---
 
@@ -70,7 +70,7 @@ This glossary defines the official terminology used across all P.H.R.O.N.O.S. pr
 **Definition**: In P.H.R.O.N.O.S. context, a digital platform for systematic observation, documentation, and analysis of strategic foresight phenomena.
 
 **Not**: A physical telescope facility  
-**Is**: A research infrastructure for continuous monitoring
+**Is**: A research platform for continuous monitoring
 
 **Components**: Documentation, datasets, analysis tools, peer review system
 
