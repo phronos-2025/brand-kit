@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phronos 2025 Brand Kit - Professional branding resources and guidelines">
+    <meta name="keywords" content="brand, kit, design, phronos, 2025">
+    <title>Phronos 2025 - Brand Kit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --dark-bg: #0f172a;
+            --light-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: "◆";
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: var(--dark-bg);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-bg);
+            transform: translateY(-4px);
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark-bg);
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Color Palette Section */
+        .colors-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .colors-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: scale(1.05);
+        }
+
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+        }
+
+        .color-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .color-info h4 {
+            font-size: 1.1rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .color-code {
+            font-family: 'Courier New', monospace;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Typography Section */
+        .typography-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .typography-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .typography-item {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .typography-item h4 {
+            color: var(--dark-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .typography-sample {
+            margin-top: 1rem;
+        }
+
+        .size-h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .size-h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .size-h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .size-body {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            background: var(--dark-bg);
+            color: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .resources-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resources-section .section-title {
+            color: white;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .resource-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+
+        .resource-card h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .resource-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .resource-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .feature-card {
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+        .feature-card:nth-child(5) { animation-delay: 0.5s; }
+        .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+
+            nav {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                margin-top: 70px;
+                min-height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features {
+                padding: 0 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        /* Loading Animation */
+        .loader {
+            border: 4px solid var(--light-bg);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 2rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Phronos Brand Kit</a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#colors">Colors</a>
+                <a href="#typography">Typography</a>
+                <a href="#resources">Resources</a>
+                <button class="cta-button" id="contactBtn">Get Started</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Complete Brand Identity System</h1>
+            <p>Comprehensive design guidelines and resources for the Phronos 2025 brand ecosystem</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('resources')">Explore Resources</button>
+                <button class="btn-secondary" onclick="downloadBrandKit()">Download Kit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">What's Included</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Color Palette</h3>
+                <p>A carefully curated color system with primary, secondary, and accent colors optimized for digital and print applications.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✍️</div>
+                <h3>Typography</h3>
+                <p>Professional font recommendations with sizing guidelines, weights, and usage rules for consistent messaging.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖼️</div>
+                <h3>Logo Guidelines</h3>
+                <p>Detailed instructions on logo usage, clear space, minimum sizes, and approved color variations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📐</div>
+                <h3>Layout Templates</h3>
+                <p>Ready-to-use layout templates for common use cases including web, social media, and print designs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>UI Components</h3>
+                <p>A comprehensive library of reusable UI components following the brand design system principles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Documentation</h3>
+                <p>Complete brand guidelines and best practices for maintaining brand consistency across all touchpoints.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section class="colors-section" id="colors">
+        <div class="colors-container">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="colors-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #2563eb;">Primary</div>
+                    <div class="color-info">
+                        <h4>Primary Blue</h4>
+                        <div class="color-code">#2563eb</div>
+                        <div class="color-code">RGB(37, 99, 235)</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1e40af;">Secondary Blue</div>
+                    <div class="color-info">
+                        <h4>Secondary Blue</h4>
+                        <div class="color-code">#1e40af</div>
+                        <div class="color-code">RGB(30, 64, 175)</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #f59e0b;">Accent Orange</div>
+                    <div class="color-info">
+                        <h4>Accent Orange</h4>
+                        <div class="color-code">#f59e0b</div>
+                        <div class="color-code">RGB(245, 158, 11)</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #10b981;">Success Green</div>
+                    <div class="color-info">
+                        <h4>Success Green</h4>
+                        <div class="color-code">#10b981</div>
+                        <div class="color-code">RGB(16, 185, 129)</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ef4444;">Error Red</div>
+                    <div class="color-info">
+                        <h4>Error Red</h4>
+                        <div class="color-code">#ef4444</div>
+                        <div class="color-code">RGB(239, 68, 68)</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0f172a;">Dark Background</div>
+                    <div class="color-info">
+                        <h4>Dark Background</h4>
+                        <div class="color-code">#0f172a</div>
+                        <div class="color-code">RGB(15, 23, 42)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="typography-section" id="typography">
+        <h2 class="section-title">Typography</h2>
+        <div class="typography-grid">
+            <div class="typography-item">
+                <h4>Heading 1</h4>
+                <p style="color: var(--text-light); font-size: 0.9rem;">Bold, Large, for page titles</p>
+                <div class="typography-sample size-h1">Phronos Brand Kit</div>
+                <div class="color-code">Font Size: 2.5rem | Weight: 800</div>
+            </div>
+            <div class="typography-item">
+                <h4>Heading 2</h4>
+                <p style="color: var(--text-light); font-size: 0.9rem;">Bold, Medium, for section titles</p>
+                <div class="typography-sample size-h2">Brand Guidelines</div>
+                <div class="color-code">Font Size: 2rem | Weight: 700</div>
+            </div>
+            <div class="typography-item">
+                <h4>Heading 3</h4>
+                <p style="color: var(--text-light); font-size: 0.9rem;">Semibold, for subsections</p>
+                <div class="typography-sample size-h3">Design System</div>
+                <div class="color-code">Font Size: 1.5rem | Weight: 600</div>
+            </div>
+            <div class="typography-item">
+                <h4>Body Text</h4>
+                <p style="color: var(--text-light); font-size: 0.9rem;">Regular, for general content</p>
+                <div class="typography-sample size-body">This is body text used throughout the brand ecosystem for readability and consistency.</div>
+                <div class="color-code">Font Size: 1rem | Weight: 400</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section" id="resources">
+        <div class="resources-container">
+            <h2 class="section-title">Brand Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>📄 Brand Guidelines</h3>
+                    <p>Comprehensive documentation covering all aspects of the Phronos brand identity including usage rules and best practices.</p>
+                    <a href="#" class="resource-link">Access Guidelines →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>🎨 Design Files</h3>
+                    <p>Figma, Adobe XD, and Sketch files containing all brand elements, components, and templates.</p>
+                    <a href="#" class="resource-link">Open Design Files →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>🖼️ Logo Assets</h3>
+                    <p>High-resolution logo files in various formats, colors, and configurations for all use cases.</p>
+                    <a href="#" class="resource-link">Download Logos →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>📸 Image Library</h3>
+                    <p>Curated collection of brand photography and illustration assets optimized for web and print.</p>
+                    <a href="#" class="resource-link">Browse Images →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>🎬 Video Templates</h3>
+                    <p>Motion templates and video style guides for creating on-brand video content and animations.</p>
+                    <a href="#" class="resource-link">Explore Templates →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>💻 Code Components</h3>
+                    <p>Pre-built HTML, CSS, and JavaScript components implementing the brand design system.</p>
+                    <a href="#" class="resource-link">View Components →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#colors">Colors</a>
+                <a href="#typography">Typography</a>
+                <a href="#resources">Resources</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Phronos. All rights reserved. | Brand Kit v1.0</p>
+                <p>Last Updated: 2025-12-11</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Download brand kit function
+        function downloadBrandKit() {
+            alert('Brand Kit download would be initiated. In production, this would trigger a file download.');
+            console.log('Download initiated at:', new Date().toISOString());
+        }
+
+        // Active navigation highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', function() {
+                let currentSection = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+
+                    if (pageYOffset >= sectionTop - 200) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').slice(1) === currentSection) {
+                        link.style.color = 'var(--primary-color)';
+                    } else {
+                        link.style.color = 'var(--text-dark)';
+                    }
+                });
+            });
+        });
+
+        // Contact button functionality
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            alert('Contact form would open here. Email: hello@phronos.com');
+        });
+
+        // Add click animations to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('click', function() {
+                console.log('Card clicked:', this.querySelector('h3').textContent);
+            });
+        });
+
+        // Add click animations to resource cards
+        const resourceCards = document.querySelectorAll('.resource-card');
+        resourceCards.forEach(card => {
+            card.addEventListener('click', function() {
+                console.log('Resource accessed:', this.querySelector('h3').textContent);
+            });
+        });
+
+        // Intersection Observer for lazy animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Log page load
+        console.log('%c🎨 Phronos Brand Kit Loaded', 'color: #2563eb; font-size: 16px; font-weight: bold;');
+        console.log('Current Time: ' + new Date().toISOString());
+        console.log('Page Version: 1.0');
+    </script>
+</body>
+</html>

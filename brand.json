@@ -5,9 +5,9 @@
     "name": "P.H.R.O.N.O.S.",
     "fullName": "Public Hub for Resilient Ontological Navigation via Open Science",
     "tagline": "Calibrating the Human Signal",
-    "mission": "A digital observatory scanning the decline of strategic foresight in a high-noise world",
-    "legalName": "P.H.R.O.N.O.S. Observatory",
-    "founded": "2024",
+    "mission": "A digital observatory providing the signals for cognitive optimization in a high-entropy world",
+    "legalName": "P.H.R.O.N.O.S.",
+    "founded": "2025",
     "type": "Research Initiative"
   },
   "domains": {
@@ -234,7 +234,7 @@
   },
   "seo": {
     "titleTemplate": "%s | P.H.R.O.N.O.S. Observatory",
-    "defaultTitle": "P.H.R.O.N.O.S. | Public Heuristics for Resilient Ontology, Navigation, and Observational Science",
+    "defaultTitle": "P.H.R.O.N.O.S. | Public Heuristics for Resilient Ontological Navigation via Open Science",
     "defaultDescription": "A digital observatory calibrating the human signal in a high-noise world. Research on strategic foresight, decision-making, and institutional resilience.",
     "keywords": [
       "strategic foresight",
